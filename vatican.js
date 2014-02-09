@@ -1,19 +1,5 @@
 function vatican() {
 
-    function killFont() {
-        var f = document.getElementsByTagName("font");
-        var popcount = 0;
-        while (f.length > 0) {
-            var fp = f[0].parentElement;
-            while (f[0].firstChild) {
-                fp.insertBefore(f[0].firstChild, f[0]);
-            }
-            popcount++;
-            console.log(popcount);
-            fp.removeChild(f[0]);
-        }
-    }
-
     var main = document.createElement("div");
     main.style.position = "relative";
     main.style.textAlign = "left";
@@ -45,6 +31,11 @@ function vatican() {
     for (var i = 0; i < p.length; i++) {
         p[i].style.fontSize = "11pt";
         p[i].style.fontFamily = "Tahoma,Verdana,Segoe,sans-serif";
+    }
+    
+    var img = document.getElementsByTagName("img");
+    while (img.length > 0) {
+        img[0].parentElement.removeChild(img[0]);
     }
 }
 
