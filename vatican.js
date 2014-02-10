@@ -27,11 +27,11 @@ function vatican() {
 
     document.body.appendChild(main);
 
-    var p = document.getElementsByTagName("p");
-    for (var i = 0; i < p.length; i++) {
-        p[i].style.fontSize = "11pt";
-        p[i].style.fontFamily = "Tahoma,Verdana,Segoe,sans-serif";
-    }
+    var pcss = document.createElement("style");
+    pcss.type = "text/css";
+    pcss.appendChild(document.createTextNode("p {font-size: 11pt; font-family:Tahoma,Verdana,Segoe,sans-serif"));
+    document.head.appendChild(pcss);
+    
     
     var img = document.getElementsByTagName("img");
     while (img.length > 0) {
